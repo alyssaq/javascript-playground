@@ -32,7 +32,7 @@ var SongSegment = function(n) {
   .push(n + " bottles of beer")
   .push("Take one down, pass it around")
   .tap(function(arr) { //_.tap(val, func-to-invovke)
-    arr.push((n < 1 ? (n-1) : "No more") + " bottles of beer on the wall");
+    arr.push(((n === 1) ? "No more" : (n-1)) + " bottles of beer on the wall");
   });
 
   this._arr = a;
@@ -47,6 +47,10 @@ SongSegment.prototype.push = function(val) {
 
 SongSegment.prototype.get = function() {
   return this._arr;
+}
+
+SongSegment.prototype.getLyrics = function() {
+  return _(this._arr).join("\n");
 }
 
 /* 

@@ -1,6 +1,6 @@
 # Javascript Playground
 
-My collection of random Javascript fun while reading    
+My collection of Javascript snippets while reading    
 Functional Javascript by Michael Fogus
 
 Using [lowdash](http://lodash.com/)
