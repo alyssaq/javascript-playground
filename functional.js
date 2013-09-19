@@ -79,3 +79,28 @@ Song.prototype.get = function() {
 Song.prototype.getLyrics = function() {
   return _(this._arr).join("\n");
 }
+
+
+/* Courtesy from Tim Oxley
+Spying on the number of times a function is called
+Usage: var spy = Spy(console, 'error')
+
+console.error('calling console.error')
+console.error('calling console.error')
+console.error('calling console.error')
+
+console.log(spy.count) // 3
+*/
+var Spy = function(target, method) {
+  var originalFunction = target[method]
+  var result = {
+    count: 0
+  }
+
+  target[method] = function() {
+    result.count++
+    return originalFunction.apply(target, arguments)
+  }
+
+  return result;
+}
