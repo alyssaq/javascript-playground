@@ -80,7 +80,6 @@ Song.prototype.getLyrics = function() {
   return _(this._arr).join("\n");
 }
 
-
 /* Courtesy from Tim Oxley
 Spying on the number of times a function is called
 Usage: var spy = Spy(console, 'error')
