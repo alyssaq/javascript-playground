@@ -25,3 +25,5 @@ By dynamically binding the _this_ reference in a call to _one_, it became possib
 * _.reduce collects a composite value from the incremental results of a function supplied with an accumulation value and each value in a collection
 * _.filter calls a predicate function (returns true/false) and grabs each value where predicate returns true, returning them in a new collection
 
+Closure is a function that captures the external bindings contained in the scope in which it was defined for later use.   
+Closures are equivalent to vampires - they capture minions and give them everlasting life until they themselves are destroyed.
